@@ -1,3 +1,20 @@
+:root {
+  --bg-app: #1c202c;
+  --bg-default: #6f7382;
+  --bg-hover: #5a5e6d;
+  --bg-active: #252a3d;
+  --border-active: #4c5164;
+
+  --text-default: #323540;
+  --text-hover: #b6b9cd;
+  --text-active: #c1c8e5;
+  --text-app: #ffffffde;
+
+  --ripple: rgba(255, 255, 255, 0.5);
+  --box-shadow: rgba(0, 0, 0, 0.15);
+  --active-bar: rgba(105, 174, 153, 0.537);
+}
+
 /* reset.css */
 /* Box sizing rules */
 *,
@@ -42,8 +59,14 @@ body {
   line-height: 1.5;
   font-weight: 400;
   font-family: system-ui, sans-serif;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--text-app);
+  background-color: var(--bg-app);
+
+  /* Disable selection on page */
+  user-select: none; /* Standard syntax */
+  -webkit-user-select: none; /* Safari/Chrome */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
 }
 
 /* A elements that don't have a class get default styles */

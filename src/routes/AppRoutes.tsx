@@ -5,7 +5,7 @@ import AuthRoutes from "./AuthRoutes";
 import { Loading } from "../components/ui/loading/Loading";
 
 const AppLayout = lazy(() => import("../components/layouts/AppLayout"));
-const Sales = lazy(() => import("../pages/Sales"));
+const Sales = lazy(() => import("../pages/sales/Sales"));
 const Product = lazy(() => import("../pages/Product"));
 const NotFound = lazy(() => import("../pages/NotFound"));
 

@@ -1,0 +1,48 @@
+import type React from "react";
+import styles from "./MenuItem.module.css";
+import { clsx } from "clsx";
+import { Column, Row } from "../../layouts/row_column";
+
+type MenuItemReturnProps = {
+  category_id: number;
+  sub_category_id: number;
+};
+
+interface MenuItemProps {
+  icon: React.ReactNode;
+  label: string;
+  isActive: boolean;
+  sub_category_id: number;
+  category_id: number;
+  callback: (args: MenuItemReturnProps) => void;
+  className?: string;
+}
+const MenuItem: React.FC<MenuItemProps> = ({
+  callback,
+  category_id,
+  sub_category_id,
+  icon,
+  label,
+  isActive = false,
+  className = "",
+}) => {
+  const css = clsx(styles.root, className, { [styles.active]: isActive });
+
+  return (
+    <Row
+      onClick={() => callback({ category_id, sub_category_id })}
+      className={css}
+      align="center"
+      justify="center"
+    >
+      <Column align="center" justify="center" gap={2}>
+        {icon}
+        <Row className={styles.label} wrap="wrap">
+          {label}
+        </Row>
+      </Column>
+      {isActive && <div className={styles.activeBar}></div>}
+    </Row>
+  );
+};
+export default MenuItem;

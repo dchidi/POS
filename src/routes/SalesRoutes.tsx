@@ -4,7 +4,7 @@ import { lazy } from "react";
 import ProtectedRoute from "./ProtectedRoute";
 
 const SalesLayout = lazy(() => import("../components/layouts/SalesLayout"));
-const Sales = lazy(() => import("../pages/Sales"));
+const Sales = lazy(() => import("../pages/sales/Sales"));
 
 const SalesRoutes = (
   <Route

@@ -1,0 +1,68 @@
+.root {
+  width: 4.4rem;
+  height: 4.6rem;
+  border-radius: 8px;
+  background-color: var(--bg-default);
+  color: var(--text-default);
+  padding: 2rem 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out,
+    transform 0.15s ease-in-out;
+  outline: none;
+}
+
+.root::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: var(--ripple);
+  opacity: 0;
+  border-radius: 100%;
+  transform: translate(-50%, -50%) scale(1, 1);
+  transition: transform 0.5s, opacity 1s;
+}
+
+.root:active::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(10, 10);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .root:hover:not(.active) {
+    background-color: var(--bg-hover);
+    color: var(--text-hover);
+    transform: translateY(-2px);
+    transition: transform 0.5s, opacity 1s;
+  }
+
+  .root::after {
+    display: none;
+  }
+}
+
+.root.active {
+  background-color: var(--bg-active);
+  color: var(--text-active);
+  border: solid 1px var(--border-active);
+}
+
+.label {
+  font-size: 0.6rem;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.activeBar {
+  position: absolute;
+  height: 40px;
+  width: 5px;
+  border-radius: 0 10px 10px 0;
+  left: 0;
+  background-color: var(--active-bar);
+}
