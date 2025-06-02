@@ -1,4 +1,3 @@
-// src/pages/Login.tsx
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
@@ -8,13 +7,13 @@ const Login = () => {
 
   const handleLogin = () => {
     login();
-    navigate("/dashboard");
+    navigate("/app/sales");
   };
 
   return (
     <div>
       <h2>Login</h2>
-      <button onClick={handleLogin}>Log in</button>
+      <button onClick={handleLogin}>Log In</button>
     </div>
   );
 };

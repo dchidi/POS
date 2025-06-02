@@ -1,7 +1,7 @@
 // src/components/Layout.tsx
 import { Link, Outlet } from "react-router-dom";
 
-const SalesLayout = () => {
+const ProductLayout = () => {
   return (
     <div>
       <nav>
@@ -14,4 +14,4 @@ const SalesLayout = () => {
   );
 };
 
-export default SalesLayout;
+export default ProductLayout;

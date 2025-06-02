@@ -10,7 +10,7 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | null>(null);
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(true); // change this later. For now allow it to show the dashboard page
 
   const login = () => setIsAuthenticated(true);
   const logout = () => setIsAuthenticated(false);
