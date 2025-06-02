@@ -1,0 +1,43 @@
+.root {
+  width: 150px;
+  min-height: 170px;
+  background-color: white;
+  color: var(--bg-active);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.root img {
+  max-width: 60%;
+}
+.details {
+  padding: 0.5rem;
+}
+.details label {
+  font-weight: 600;
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Hides overflow content */
+  text-overflow: ellipsis; /* Adds '...' at the end */
+  max-width: 200px; /* Optional: limit the width */
+}
+.price {
+  font-size: 0.7rem;
+  color: var(--border-active);
+}
+.qtyLeft {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--bg-active);
+  color: var(--text-active);
+  border-radius: 0 5px 0 8px;
+  min-width: 35px;
+  padding: 3px;
+  aspect-ratio: 1/1;
+  font-weight: 600;
+  place-content: center;
+  text-align: center;
+  border: solid 2px var(--border-active);
+}

@@ -3,6 +3,7 @@ import MenuItem from "../../components/ui/menu_item/MenuItem";
 import { GiSlicedBread } from "react-icons/gi";
 import { Row } from "../../components/layouts/row_column";
 import styles from "./Sales.module.css";
+import ProductItem from "../../components/ui/product_item/ProductItem";
 
 // src/pages/Dashboard.tsx
 const Sales = () => {
@@ -40,6 +41,16 @@ const Sales = () => {
           className={styles.sideAction}
         />
       </Row>
+      <ProductItem
+        callback={() => {}}
+        label="Delux Crispy Vegan Burger With Onion Rings"
+        category_id={1}
+        sub_category_id={1}
+        isActive={false}
+        price={2.22}
+        image_url="/burger1.jpg"
+        quantity_left={120}
+      />
     </div>
   );
 };
