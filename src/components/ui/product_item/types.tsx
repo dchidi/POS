@@ -12,6 +12,6 @@ export interface ProductItemProps {
   category_id: string;
   callback: (args: ProductItemReturnProps) => void;
   className?: string;
-  quantity_left: number;
+  quantity_left?: number;
   product_id: string;
 }

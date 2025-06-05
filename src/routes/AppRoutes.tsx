@@ -4,7 +4,10 @@ import ProtectedRoute from "./ProtectedRoute";
 import AuthRoutes from "./AuthRoutes";
 import { Loading } from "../components/ui/loading/Loading";
 
-const AppLayout = lazy(() => import("../components/layouts/AppLayout"));
+const AppLayout = lazy(() => import("../components/layouts/app/AppLayout"));
+const SalesLayout = lazy(
+  () => import("../components/layouts/sales/SalesLayout")
+);
 const Sales = lazy(() => import("../pages/sales/Sales"));
 const Product = lazy(() => import("../pages/Product"));
 const NotFound = lazy(() => import("../pages/NotFound"));
@@ -28,7 +31,9 @@ const AppRoutes = () => {
             </ProtectedRoute>
           }
         >
-          <Route path="sales" element={<Sales />} />
+          <Route path="sales" element={<SalesLayout />}>
+            <Route index element={<Sales />} />
+          </Route>
           <Route path="product" element={<Product />} />
           <Route path="*" element={<NotFound />} />
         </Route>

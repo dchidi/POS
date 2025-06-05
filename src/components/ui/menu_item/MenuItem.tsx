@@ -28,7 +28,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
           {label}
         </Row>
       </Column>
-      {isActive && <div className={styles.activeBar}></div>}
+      {/* {isActive && <div className={styles.activeBar}></div>} */}
     </Row>
   );
 };

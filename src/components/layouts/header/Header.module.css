@@ -1,0 +1,15 @@
+.root {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--bg-app);
+  padding: 1rem;
+  border-bottom: solid 1px var(--text-default);
+}
+.search {
+  margin-left: auto;
+}
+
+.menuToggleIcon {
+  cursor: pointer;
+}

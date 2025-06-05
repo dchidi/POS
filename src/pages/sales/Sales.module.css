@@ -1,20 +1,15 @@
-.sideAction {
-  width: 80px;
-  height: 40px;
-  padding: 0;
-  border-radius: 4px;
-  background-color: var(--text-app);
-  color: var(--text-default);
+.root {
+  height: 100%;
 }
-
-.sideAction:hover {
-  transform: none;
-  transition: none;
+.content,
+.sideMenu {
+  height: 90vh;
+  overflow-y: auto;
+  padding-bottom: 2t5rem;
 }
-
-.sideAction:hover:not(.active) {
-  background-color: var(--text-app);
-  color: var(--text-default);
-  transform: translateY(2px);
-  transition: transform 0.5s, opacity 1s;
+.sideMenu {
+  flex: 1;
+}
+.content {
+  flex: 10;
 }

@@ -1,6 +1,6 @@
 .root {
-  width: 150px;
-  min-height: 170px;
+  width: calc(95% / 5);
+  height: 200px;
   background-color: white;
   color: var(--bg-active);
   border-radius: 8px;
@@ -14,24 +14,30 @@
 }
 .details {
   padding: 0.5rem;
+  text-align: center;
 }
 .details label {
   font-weight: 600;
-  white-space: nowrap; /* Prevents text from wrapping */
-  overflow: hidden; /* Hides overflow content */
-  text-overflow: ellipsis; /* Adds '...' at the end */
-  max-width: 200px; /* Optional: limit the width */
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%; /* Adjust width as needed */
+  white-space: normal; /* Allow text to wrap */
 }
 .price {
-  font-size: 0.7rem;
-  color: var(--border-active);
+  font-size: 0.8rem;
+  color: var(--bg-app);
+  font-weight: 600;
 }
 .qtyLeft {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: var(--bg-active);
-  color: var(--text-active);
+  color: var(--bg-default);
   border-radius: 0 5px 0 8px;
   min-width: 35px;
   padding: 3px;
@@ -39,5 +45,4 @@
   font-weight: 600;
   place-content: center;
   text-align: center;
-  border: solid 2px var(--border-active);
 }
