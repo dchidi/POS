@@ -35,7 +35,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
         <div className={styles.qtyLeft}>{quantity_left || ""}</div>
       </Row>
       <Column className={styles.details} gap={3} align="center">
-        <label>{label}</label>
+        <div className={styles.label}>{label}</div>
         <Row align="center" className={styles.price}>
           {CURRENCY.symbol}
           {formatCurrency(price)}

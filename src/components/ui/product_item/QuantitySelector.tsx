@@ -1,10 +1,9 @@
 import React from "react";
 import styles from "./QuantitySelector.module.css";
 import { Row } from "../../layouts/row_column";
-import { CURRENCY } from "../../../config";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import clsx from "clsx";
-import { useNumberFormatter } from "../../../hooks/useNumberFormatter";
+import { MdDelete } from "react-icons/md";
 
 interface QuantitySelectorProps {
   isItemSelected?: boolean;
@@ -28,27 +27,27 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = ({
   const highlight = clsx(styles.btn, { [styles.highlight]: isItemSelected });
 
   const fnText = () => {
-    console.log(product_id, category_id, sub_category_id);
+    console.log(product_id, category_id, sub_category_id, unit_price);
   };
 
-  const { formatCurrency } = useNumberFormatter();
   return (
     <Row className={root} gap={20} align="center">
       <Row className={styles.actions} gap={10} align="center">
+        <button className={styles.deleteBtn} onClick={fnText}>
+          <MdDelete />
+        </button>
         <button className={styles.btn} onClick={fnText}>
-          <FaMinus />
+          <FaMinus color="black" />
         </button>
         <div className={styles.counter}>{quantity}</div>
         <button className={highlight}>
-          <FaPlus />
+          <FaPlus color="black" />
         </button>
       </Row>
-      <div>
-        <span>
-          {CURRENCY.symbol}
-          {formatCurrency(unit_price * quantity)}
-        </span>
-      </div>
+      {/* <div>
+        {CURRENCY.symbol}
+        {formatCurrency(unit_price * quantity)}
+      </div> */}
     </Row>
   );
 };

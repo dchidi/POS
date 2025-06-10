@@ -1,5 +1,6 @@
+/* Mobile view */
 .root {
-  width: calc(95% / 5);
+  width: calc(96% / 2);
   height: 200px;
   background-color: white;
   color: var(--bg-active);
@@ -7,6 +8,7 @@
   font-size: 0.8rem;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .root img {
@@ -16,7 +18,7 @@
   padding: 0.5rem;
   text-align: center;
 }
-.details label {
+.details .label {
   font-weight: 600;
 
   display: -webkit-box;
@@ -45,4 +47,37 @@
   font-weight: 600;
   place-content: center;
   text-align: center;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* Adjust styles for small screens (e.g., larger phones) */
+  .root {
+    width: calc(96% / 3);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Tablet styles */
+  .root {
+    width: calc(95% / 4);
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Small laptops/desktops */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Large desktops */
+}
+
+/* 2K and 4K screens (optional) */
+@media (min-width: 1600px) {
+  /* Ultra-wide monitors */
+  .root {
+    /* width: calc(95% / 8); */
+  }
 }

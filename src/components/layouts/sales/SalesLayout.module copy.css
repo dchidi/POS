@@ -1,0 +1,64 @@
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* Adjust styles for small screens (e.g., larger phones) */
+  .content {
+    background-color: yellow;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Tablet styles */
+  .content {
+    background-color: red;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Small laptops/desktops */
+  .content {
+    background-color: blue;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Large desktops */
+  .content {
+    background-color: purple;
+  }
+}
+
+/* 2K and 4K screens (optional) */
+@media (min-width: 1600px) {
+  /* Ultra-wide monitors */
+  .content {
+    background-color: orange;
+  }
+  .content,
+  .aside {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .content {
+    flex: 4;
+    position: relative;
+    /* overflow-y: auto; */
+    /* height: 100vh; */
+  }
+
+  .header {
+    margin-bottom: 1rem;
+  }
+  .outlet {
+    padding: 1rem;
+    /* margin-top: 3rem; */
+  }
+
+  .aside {
+    flex: 1;
+    background-color: var(--bg-hover);
+    /* margin-top: 4rem; */
+  }
+}

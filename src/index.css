@@ -61,7 +61,7 @@ body {
   font-family: system-ui, sans-serif;
   color: var(--text-app);
   background-color: var(--bg-app);
-
+  font-size: 16px;
   /* Disable selection on page */
   user-select: none; /* Standard syntax */
   -webkit-user-select: none; /* Safari/Chrome */
@@ -84,7 +84,6 @@ picture {
 
 /* Inherit fonts for form elements */
 input,
-button,
 textarea,
 select {
   font: inherit;
@@ -103,5 +102,47 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile view */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* Adjust styles for small screens (e.g., larger phones) */
+  .content {
+    /* background-color: yellow; */
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Tablet styles */
+  .content {
+    /* background-color: red; */
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Small laptops/desktops */
+  .content {
+    /* background-color: blue; */
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Large desktops */
+  .content {
+    /* background-color: purple; */
+  }
+}
+
+/* 2K and 4K screens (optional) */
+@media (min-width: 1600px) {
+  /* Ultra-wide monitors */
+  .content {
+    /* background-color: orange; */
   }
 }

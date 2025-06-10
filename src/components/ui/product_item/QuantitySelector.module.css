@@ -1,14 +1,20 @@
 .root {
   margin-bottom: 1rem;
 }
-.btn {
+.btn,
+.deleteBtn {
   border-radius: 100px;
   border: none;
-  width: 20px;
   aspect-ratio: 1/1;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.8rem;
   color: var(--bg-app);
+  background-color: white;
+  cursor: pointer;
+}
+.deleteBtn {
+  color: maroon;
+  font-size: 0.95rem;
 }

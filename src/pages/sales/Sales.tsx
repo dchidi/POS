@@ -111,13 +111,19 @@ const Sales = () => {
     },
   ];
   return (
-    <Row gap={10} className={styles.root}>
+    <Row gap={10} className={styles.root} fullHeight>
       <Column gap={10} className={styles.sideMenu}>
         {dummyMenu.map((item, i) => (
-          <MenuItem callback={testFn} {...item} key={i} isActive={i === 0} />
+          <MenuItem
+            callback={testFn}
+            {...item}
+            key={i}
+            isActive={i === 0}
+            className={styles.menuItem}
+          />
         ))}
       </Column>
-      <Row gap={10} wrap="wrap" className={styles.content}>
+      <Row gap={10} wrap="wrap" className={styles.content} justify="center">
         {/* <h2>All Menu</h2> */}
         <ProductItem
           callback={() => {}}

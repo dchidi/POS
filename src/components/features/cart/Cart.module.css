@@ -1,5 +1,9 @@
-.cartQuickActions {
-  padding: 1rem;
+.root {
+  display: none !important;
+}
+.cartQuickActions,
+.orderDetails {
+  padding: 0.5rem;
 }
 .sideAction {
   width: 48%;
@@ -21,20 +25,18 @@
   transform: translateY(2px);
   transition: transform 0.5s, opacity 1s;
 }
-.orderDetails {
-  padding: 1rem;
-}
-.orderDetails h4 {
-  margin-bottom: 1rem;
+.total {
+  margin: 0.5rem 0 0 0;
+  font-weight: 600;
 }
 .orderSummary {
   background-color: var(--bg-active);
-  margin: 1rem;
+  /* margin: 1rem; */
   font-weight: 400;
   padding: 1rem;
   color: var(--text-active);
-  font-size: 0.7rem;
-  border-radius: 6px;
+  font-size: 0.8rem;
+  /* border-radius: 6px; */
 }
 
 .nmbl {
@@ -63,6 +65,39 @@
   /* height: 3.2em;  */
 }
 .orderContent {
-  height: 50vh;
+  height: 65vh;
   overflow: auto;
+}
+
+/* Mobile view */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* Adjust styles for small screens (e.g., larger phones) */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Tablet styles */
+  .root {
+    display: block !important;
+    height: 100vh;
+    overflow: auto;
+    border-left: solid 1px var(--text-default);
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Small laptops/desktops */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Large desktops */
+}
+
+/* 2K and 4K screens (optional) */
+@media (min-width: 1600px) {
+  /* Ultra-wide monitors */
 }

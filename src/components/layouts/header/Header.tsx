@@ -1,14 +1,32 @@
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Row } from "../row_column";
+import { Column, Row } from "../row_column";
 import styles from "./Header.module.css";
+import { HiOutlineShoppingBag } from "react-icons/hi";
+import { IoSearch } from "react-icons/io5";
+
+import { useNumberFormatter } from "../../../hooks/useNumberFormatter";
+import CurrencyUI from "../../ui/currency_formatter/CurrencyUI";
 
 const Header: React.FC<{ search?: React.ReactNode }> = ({ search }) => {
+  const { formatCurrency } = useNumberFormatter();
   return (
-    <Row align="center" gap={30} fullWidth className={styles.root}>
-      <GiHamburgerMenu className={styles.menuToggleIcon} />
-      ScanPay
-      <div className={styles.search}>{search}</div>
-    </Row>
+    <Column align="end">
+      <Row className={styles.currencyUI}>
+        <CurrencyUI amount={formatCurrency(0)} />
+      </Row>
+      <Row align="center" gap={10} fullWidth className={styles.sticky}>
+        <GiHamburgerMenu className={styles.menuToggleIcon} />
+        ScanPay
+        <div className={styles.searchBox}>{search}</div>
+        <Row align="center" gap={20} className={styles.mobileViewOnly}>
+          <IoSearch size={23} />
+          <Row className={styles.shoppingBag}>
+            <HiOutlineShoppingBag size={23} />
+            <div className={styles.counter}>0</div>
+          </Row>
+        </Row>
+      </Row>
+    </Column>
   );
 };
 export default Header;
