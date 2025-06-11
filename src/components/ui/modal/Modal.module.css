@@ -19,6 +19,8 @@
   /* padding-top: 3rem; */
   border-radius: 8px;
   position: relative;
+  max-height: 90vh;
+  overflow: auto;
 }
 
 .modalClose {

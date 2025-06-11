@@ -6,7 +6,7 @@ import { RiGroupLine } from "react-icons/ri";
 import { BsSave2 } from "react-icons/bs";
 import { MdOutlineDeliveryDining } from "react-icons/md";
 import clsx from "clsx";
-import { CURRENCY } from "../../../config";
+// import { CURRENCY } from "../../../config";
 import QuantitySelector from "../../ui/product_item/QuantitySelector";
 import CurrencyUI from "../../ui/currency_formatter/CurrencyUI";
 import { useNumberFormatter } from "../../../hooks/useNumberFormatter";

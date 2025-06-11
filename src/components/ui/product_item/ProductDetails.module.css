@@ -1,6 +1,6 @@
 /* Mobile view */
 .root {
-  width: 280px;
+  width: 300px;
 }
 img.productImg {
   width: 60px;
@@ -106,7 +106,7 @@ img.productImg {
 @media (min-width: 768px) {
   /* Tablet styles */
   .root {
-    width: 350px;
+    width: 400px;
   }
 }
 
