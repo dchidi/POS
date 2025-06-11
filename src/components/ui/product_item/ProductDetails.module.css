@@ -1,0 +1,72 @@
+/* Mobile view */
+.root {
+  width: 280px;
+}
+img.productImg {
+  width: 60px;
+  object-fit: scale-down;
+  border-radius: 6px;
+}
+.modalTop {
+  background-color: rgb(255, 255, 255);
+  color: var(--bg-app);
+  border-radius: 8px 8px 0 0;
+  padding: 0.5rem 1rem;
+}
+.itemName,
+.itemDescription,
+.lbl {
+  font-size: 0.8rem;
+}
+.itemName {
+  font-weight: 600;
+}
+.amount {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.itemDescription {
+  margin-top: 0.5rem;
+}
+.itemDescription h5 {
+  margin: 0;
+}
+.modalBody {
+  padding: 1.2rem 1rem 1rem 1rem;
+}
+.lbl {
+  font-weight: 600;
+  margin-top: 10px;
+}
+.qtySelector {
+  background-color: rgba(255, 255, 255, 0.326);
+  padding: 0.5rem;
+  border-radius: 100px;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* Adjust styles for small screens (e.g., larger phones) */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Tablet styles */
+  .root {
+    width: 350px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Small laptops/desktops */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Large desktops */
+}
+
+/* 2K and 4K screens (optional) */
+@media (min-width: 1600px) {
+  /* Ultra-wide monitors */
+}

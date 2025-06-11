@@ -25,9 +25,7 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   /* Tablet styles */
-  .root {
-    /* height: 100vh; */
-  }
+
   .sideMenu {
     flex: 1;
     /* height: 90vh; */

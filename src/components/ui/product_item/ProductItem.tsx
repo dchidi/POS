@@ -20,28 +20,30 @@ const ProductItem: React.FC<ProductItemProps> = ({
   const css = clsx(styles.root, className);
   const { formatCurrency } = useNumberFormatter();
   return (
-    <Column
-      onClick={() => callback({ category_id, sub_category_id, product_id })}
-      className={css}
-      justify="center"
-    >
-      <Row align="center" justify="center">
-        <img
-          src={image_url}
-          alt={label}
-          loading="lazy"
-          className={styles.img}
-        />
-        <div className={styles.qtyLeft}>{quantity_left || ""}</div>
-      </Row>
-      <Column className={styles.details} gap={3} align="center">
-        <div className={styles.label}>{label}</div>
-        <Row align="center" className={styles.price}>
-          {CURRENCY.symbol}
-          {formatCurrency(price)}
+    <>
+      <Column
+        onClick={() => callback({ category_id, sub_category_id, product_id })}
+        className={css}
+        justify="center"
+      >
+        <Row align="center" justify="center">
+          <img
+            src={image_url}
+            alt={label}
+            loading="lazy"
+            className={styles.img}
+          />
+          <div className={styles.qtyLeft}>{quantity_left || ""}</div>
         </Row>
+        <Column className={styles.details} gap={3} align="center">
+          <div className={styles.label}>{label}</div>
+          <Row align="center" className={styles.price}>
+            {CURRENCY.symbol}
+            {formatCurrency(price)}
+          </Row>
+        </Column>
       </Column>
-    </Column>
+    </>
   );
 };
 export default ProductItem;
