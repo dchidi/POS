@@ -62,7 +62,7 @@ img.productImg {
   cursor: pointer;
 }
 .active {
-  background-color: rgb(167, 231, 212);
+  background-color: rgb(200, 242, 229);
   color: var(--bg-app);
   border: solid 2px rgb(51, 113, 95);
 }
@@ -87,6 +87,7 @@ img.productImg {
 }
 .btnCancel {
   background-color: var(--text-active);
+  color: var(--bg-app);
 }
 .btnAdd {
   border: none;
