@@ -35,6 +35,7 @@ interface FlexProps extends HTMLAttributes<HTMLDivElement> {
   fullWidth?: boolean;
   fullHeight?: boolean;
   inline?: boolean;
+  showOn?: "all" | "mobileOnly" | "desktopOnly";
 }
 
 // Utility to normalize gap values
@@ -51,12 +52,23 @@ export const Row = memo(function Row({
   fullWidth = false,
   fullHeight = false,
   inline = false,
+  showOn = "all",
   ...props
 }: FlexProps) {
-  const css = clsx(styles.row, className, {
-    [styles.fullWidth]: fullWidth,
-    [styles.fullHeight]: fullHeight,
-  });
+  const css = clsx(
+    styles.row,
+
+    {
+      [styles.fullWidth]: fullWidth,
+      [styles.fullHeight]: fullHeight,
+      [styles.mobileOnly]: showOn === "mobileOnly",
+      [styles.desktopOnly]: showOn === "desktopOnly",
+    },
+    className
+  );
+
+  const controlDisplay =
+    showOn === "all" || showOn === undefined || showOn === null;
 
   return (
     <div
@@ -65,7 +77,9 @@ export const Row = memo(function Row({
       role="presentation"
       className={css}
       style={{
-        display: inline ? "inline-flex" : "flex",
+        ...(controlDisplay && {
+          display: inline ? "inline-flex" : "flex",
+        }),
         gap: normalizeGap(gap),
         justifyContent: justify,
         alignItems: align,
@@ -89,12 +103,22 @@ export const Column = memo(function Column({
   fullWidth = false,
   fullHeight = false,
   inline = false,
+  showOn = "all",
   ...props
 }: FlexProps) {
-  const css = clsx(styles.column, className, {
-    [styles.fullWidth]: fullWidth,
-    [styles.fullHeight]: fullHeight,
-  });
+  const css = clsx(
+    styles.column,
+    {
+      [styles.fullWidth]: fullWidth,
+      [styles.fullHeight]: fullHeight,
+      [styles.mobileOnly]: showOn === "mobileOnly",
+      [styles.desktopOnly]: showOn === "desktopOnly",
+    },
+    className
+  );
+
+  const controlDisplay =
+    showOn === "all" || showOn === undefined || showOn === null;
 
   return (
     <div
@@ -103,7 +127,9 @@ export const Column = memo(function Column({
       role="presentation"
       className={css}
       style={{
-        display: inline ? "inline-flex" : "flex",
+        ...(controlDisplay && {
+          display: inline ? "inline-flex" : "flex",
+        }),
         flexDirection: "column",
         gap: normalizeGap(gap),
         justifyContent: justify,

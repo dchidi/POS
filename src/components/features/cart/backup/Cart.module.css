@@ -1,0 +1,103 @@
+.root {
+  display: none !important;
+}
+.cartQuickActions,
+.orderDetails {
+  padding: 0.5rem;
+}
+.sideAction {
+  width: 48%;
+  height: 45px;
+  padding: 1.5rem 0;
+  border-radius: 4px;
+  background-color: var(--text-app);
+  color: var(--text-default);
+}
+
+.sideAction:hover {
+  transform: none;
+  transition: none;
+}
+
+.sideAction:hover:not(.active) {
+  background-color: var(--text-app);
+  color: var(--text-default);
+  transform: translateY(2px);
+  transition: transform 0.5s, opacity 1s;
+}
+.total {
+  margin: 0.5rem 0 0 0;
+  font-weight: 600;
+}
+.orderSummary {
+  background-color: var(--bg-active);
+  /* margin: 1rem; */
+  font-weight: 400;
+  padding: 1rem;
+  color: var(--text-active);
+  font-size: 0.8rem;
+  /* border-radius: 6px; */
+}
+
+.nmbl {
+  border-top: solid 1px #ccc;
+  margin-top: 10px;
+  padding-top: 5px;
+}
+.qtySelector {
+  margin-top: 0.5rem;
+}
+.cartItem {
+  border-bottom: solid 1px rgba(238, 238, 238, 0.196);
+  margin-bottom: 1rem;
+}
+.cartItem p {
+  font-size: 0.8rem;
+  /* Limit to two lines with ellipsis */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 200px; /* Adjust width as needed */
+  white-space: normal; /* Allow text to wrap */
+  /* height: 3.2em;  */
+}
+.orderContent {
+  height: 65vh;
+  overflow: auto;
+}
+
+/* Mobile view */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* Adjust styles for small screens (e.g., larger phones) */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Tablet styles */
+  .root {
+    display: block !important;
+    height: 100vh;
+    overflow: auto;
+    border-left: solid 1px var(--text-default);
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Small laptops/desktops */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Large desktops */
+}
+
+/* 2K and 4K screens (optional) */
+@media (min-width: 1600px) {
+  /* Ultra-wide monitors */
+}

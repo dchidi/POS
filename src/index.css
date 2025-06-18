@@ -1,5 +1,5 @@
 :root {
-  --bg-app: #1c202c;
+  /* --bg-app: #1c202c;
   --bg-default: #6f7382;
   --bg-hover: #5a5e6d;
   --bg-active: #252a3d;
@@ -12,7 +12,10 @@
 
   --ripple: rgba(255, 255, 255, 0.5);
   --box-shadow: rgba(0, 0, 0, 0.15);
-  --active-bar: rgba(105, 174, 153, 0.537);
+  --active-bar: rgba(105, 174, 153, 0.537); */
+  --text-primary: #000;
+
+  --bg-primary: #fff;
 }
 
 /* reset.css */
@@ -54,14 +57,15 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-weight: 400;
   font-family: system-ui, sans-serif;
-  color: var(--text-app);
-  background-color: var(--bg-app);
-  font-size: 16px;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  font-size: 10px;
   /* Disable selection on page */
   user-select: none; /* Standard syntax */
   -webkit-user-select: none; /* Safari/Chrome */
@@ -102,47 +106,5 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-}
-
-/* Mobile view */
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-  /* Adjust styles for small screens (e.g., larger phones) */
-  .content {
-    /* background-color: yellow; */
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  /* Tablet styles */
-  .content {
-    /* background-color: red; */
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  /* Small laptops/desktops */
-  .content {
-    /* background-color: blue; */
-  }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  /* Large desktops */
-  .content {
-    /* background-color: purple; */
-  }
-}
-
-/* 2K and 4K screens (optional) */
-@media (min-width: 1600px) {
-  /* Ultra-wide monitors */
-  .content {
-    /* background-color: orange; */
   }
 }

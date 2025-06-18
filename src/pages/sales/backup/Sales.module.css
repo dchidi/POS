@@ -1,0 +1,78 @@
+/* Mobile view */
+.root {
+  height: 89vh;
+  padding: 0 1rem;
+  flex-direction: column;
+}
+.content {
+  /* height: 88vh; */
+  overflow-y: auto;
+  padding-bottom: 0.5rem;
+}
+.sideMenu {
+  flex-direction: row !important;
+  width: 89vw;
+  overflow: hidden !important;
+}
+.sideMenuInner {
+  flex-direction: row !important;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.sideMenuInner::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.menuItem {
+  flex-shrink: 0;
+}
+.content {
+  flex: 10;
+  /* justify-content: center; */
+  padding-right: 0.5rem;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* Adjust styles for small screens (e.g., larger phones) */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Tablet styles */
+  .root {
+    flex-direction: row;
+  }
+  .sideMenuInner,
+  .sideMenu {
+    display: block !important;
+  }
+  .sideMenu {
+    flex: 1;
+    /* height: 90vh; */
+    overflow-y: auto;
+    padding: 0 1.2rem 0.5rem 0;
+    overflow-x: hidden;
+    width: fit-content;
+  }
+  .menuItem {
+    margin-bottom: 20px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Small laptops/desktops */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Large desktops */
+}
+
+/* 2K and 4K screens (optional) */
+@media (min-width: 1600px) {
+  /* Ultra-wide monitors */
+}

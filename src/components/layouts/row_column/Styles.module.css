@@ -21,3 +21,44 @@
 .fullHeight {
   height: 100vh;
 }
+
+.mobileOnly,
+.desktopOnly {
+  display: none;
+}
+/* ALL view */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* Adjust styles for small screens (e.g., larger phones) */
+}
+
+@media (max-width: 767px) {
+  /* Mobile view */
+  .mobileOnly {
+    display: flex;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Tablet styles */
+  .desktopOnly {
+    display: flex;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Small laptops/desktops */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Large desktops */
+}
+
+/* 2K and 4K screens (optional) */
+@media (min-width: 1600px) {
+  /* Ultra-wide monitors */
+}

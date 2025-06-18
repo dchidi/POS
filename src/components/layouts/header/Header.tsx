@@ -10,8 +10,8 @@ import CurrencyUI from "../../ui/currency_formatter/CurrencyUI";
 const Header: React.FC<{ search?: React.ReactNode }> = ({ search }) => {
   const { formatCurrency } = useNumberFormatter();
   return (
-    <Column align="end">
-      <Row className={styles.currencyUI}>
+    <Column>
+      <Row className={styles.currencyUI} justify="center">
         <CurrencyUI amount={formatCurrency(0)} />
       </Row>
       <Row align="center" gap={10} fullWidth className={styles.sticky}>

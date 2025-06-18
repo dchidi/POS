@@ -1,9 +1,10 @@
-/* Generic view */
-
-@media (max-width: 767px) {
-  /* Mobile view */
+/* Mobile view */
+.content {
+  flex: 5;
 }
-
+.cart {
+  flex: 1.5;
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   /* Adjust styles for small screens (e.g., larger phones) */
@@ -12,13 +13,6 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   /* Tablet styles */
-  .content {
-    flex: 2;
-  }
-  .cart {
-    flex: 1;
-    background-color: yellow;
-  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -34,4 +28,15 @@
 /* 2K and 4K screens (optional) */
 @media (min-width: 1600px) {
   /* Ultra-wide monitors */
+  .root {
+    margin: 0 18rem;
+    border: solid 1px var(--text-default);
+  }
+}
+@media (min-width: 2300px) {
+  /* Ultra-wide monitors */
+  .root {
+    margin: 0 40rem;
+    border: solid 1px var(--text-default);
+  }
 }
