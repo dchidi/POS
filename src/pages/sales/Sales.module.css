@@ -1,10 +1,42 @@
 /* Mobile view */
+.sideMenuContainer {
+  padding: 0 0.5rem;
+}
+.sideMenu {
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.sideMenuInner::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.menuItem {
+  flex-shrink: 0;
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   /* Adjust styles for small screens (e.g., larger phones) */
 }
 
+/* all mobile */
+@media (max-width: 767px) {
+  .root {
+    flex-direction: column;
+  }
+  .sideMenuContainer {
+    width: 100vw;
+    justify-content: center !important;
+  }
+  .sideMenu {
+    gap: 10px;
+    flex-direction: row !important;
+  }
+  .sideMenu,
+  .sideMenuContainer {
+    flex-direction: row !important;
+  }
+}
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   /* Tablet styles */

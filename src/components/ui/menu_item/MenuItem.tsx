@@ -6,12 +6,13 @@ import type { MenuItemProps } from "./types";
 
 const MenuItem: React.FC<MenuItemProps> = ({
   callback,
-  category_id,
-  sub_category_id,
-  icon,
-  label,
   isActive = false,
   className = "",
+  img_url,
+  label,
+  name,
+  category_id,
+  sub_category_id,
 }) => {
   const css = clsx(styles.root, className, { [styles.active]: isActive });
 
@@ -23,7 +24,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
       justify="center"
     >
       <Column align="center" justify="center" gap={2}>
-        {icon}
+        <img src={img_url} />
         <Row className={styles.label} wrap="wrap">
           {label}
         </Row>

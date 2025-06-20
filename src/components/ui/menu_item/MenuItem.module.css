@@ -2,9 +2,9 @@
   width: 4.4rem;
   height: 4.6rem;
   border-radius: 8px;
-  background-color: var(--bg-active);
+  background-color: #e9e9e9;
   color: var(--text-active);
-  border: solid 1px var(--border-active);
+  /* border: solid 1px var(--border-active); */
   padding: 2rem 0;
   cursor: pointer;
   position: relative;

@@ -17,17 +17,16 @@ const Sales = () => {
         {isLoadingMenu ? (
           <div>loading menu ui...</div>
         ) : (
-          <Column gap={10} className={styles.sideMenu}>
-            <Column gap={10} className={styles.sideMenuInner}>
+          <Column gap={10} className={styles.sideMenuContainer}>
+            <Column gap={10} className={styles.sideMenu}>
               {pageMenu!!.map((item, i) => (
-                // <MenuItem
-                //   callback={testFn}
-                //   {...item}
-                //   key={i}
-                //   isActive={i === 0}
-                //   className={styles.menuItem}
-                // />
-                <div>menu</div>
+                <MenuItem
+                  callback={onClickHandler}
+                  {...item}
+                  key={i}
+                  isActive={i === 0}
+                  className={styles.menuItem}
+                />
               ))}
             </Column>
           </Column>
@@ -45,22 +44,17 @@ const Sales = () => {
             product_id="1"
           /> */}
           {[...new Array(50).values()].map((_, k) => (
-            <div
-              style={{ width: "250px", height: "300px", background: "#000" }}
-            >
-              32
-            </div>
-            // <ProductItem
-            //   callback={() => {}}
-            //   label="Delux Crispy Vegan Burger With Onion Rings"
-            //   category_id={"1"}
-            //   sub_category_id={"1"}
-            //   price={2.22}
-            //   image_url="/burger1.jpg"
-            //   quantity_left={120}
-            //   product_id="1"
-            //   key={k}
-            // />
+            <ProductItem
+              callback={() => {}}
+              label="Delux Crispy Vegan Burger With Onion Rings"
+              category_id={"1"}
+              sub_category_id={"1"}
+              price={2.22}
+              image_url="/burger1.jpg"
+              quantity_left={120}
+              product_id="1"
+              key={k}
+            />
           ))}
         </Row>
       </Row>
