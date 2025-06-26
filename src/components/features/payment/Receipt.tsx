@@ -5,7 +5,7 @@ import { Column, Row } from "../../layouts/row_column";
 import CurrencyUI from "../../ui/currency_formatter/CurrencyUI";
 import { useNumberFormatter } from "../../../hooks/useNumberFormatter";
 import { SiShopify } from "react-icons/si";
-import { CURRENCY } from "../../../config";
+import { CURRENCY } from "../../../app_config";
 
 type ReceiptData = {
   date: string;

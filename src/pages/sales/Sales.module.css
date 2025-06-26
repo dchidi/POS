@@ -1,17 +1,38 @@
 /* Mobile view */
-.sideMenuContainer {
+.sideMenuContainer,
+.contentContainer {
   padding: 0 0.5rem;
 }
-.sideMenu {
-  overflow-x: auto;
+.sideMenu,
+.content {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE 10+ */
 }
-.sideMenuInner::-webkit-scrollbar {
+.sideMenu {
+  overflow-x: auto;
+}
+.sideMenu::-webkit-scrollbar,
+.content::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
 .menuItem {
   flex-shrink: 0;
+}
+
+.contentContainer {
+  overflow-y: auto; /* Ensure scrolling works */
+}
+.content {
+  padding: 1rem 0.5rem 8rem 0.5rem;
+  overflow-y: auto;
+}
+.activeMenu {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  color: var(--black-200);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -40,6 +61,12 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   /* Tablet styles */
+  .sideMenuContainer {
+    height: 88%;
+  }
+  .sideMenu {
+    padding-bottom: 0.5rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */

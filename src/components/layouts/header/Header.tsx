@@ -6,6 +6,7 @@ import { IoSearch } from "react-icons/io5";
 
 import { useNumberFormatter } from "../../../hooks/useNumberFormatter";
 import CurrencyUI from "../../ui/currency_formatter/CurrencyUI";
+import { APP_NAME } from "../../../app_config";
 
 const Header: React.FC<{ search?: React.ReactNode }> = ({ search }) => {
   const { formatCurrency } = useNumberFormatter();
@@ -16,7 +17,7 @@ const Header: React.FC<{ search?: React.ReactNode }> = ({ search }) => {
       </Row>
       <Row align="center" gap={10} fullWidth className={styles.sticky}>
         <GiHamburgerMenu className={styles.menuToggleIcon} />
-        ScanPay
+        <div className={styles.appName}>{APP_NAME}</div>
         <div className={styles.searchBox}>{search}</div>
         <Row align="center" gap={20} className={styles.mobileViewOnly}>
           <IoSearch size={23} />

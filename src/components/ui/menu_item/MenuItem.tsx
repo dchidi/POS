@@ -10,7 +10,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
   className = "",
   img_url,
   label,
-  name,
+  // name = "",
   category_id,
   sub_category_id,
 }) => {

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { CURRENCY } from "../../../config";
+import { CURRENCY } from "../../../app_config";
 import styles from "./CurrencyUI.module.css";
 
 const CurrencyUI: React.FC<{

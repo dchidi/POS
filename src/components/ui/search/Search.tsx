@@ -14,7 +14,7 @@ const Search: React.FC<SearchProps> = ({ placeholder, callback }) => {
   };
   return (
     <Row className={styles.root}>
-      <div className={styles.search} onClick={handleSearchClick}>
+      <div className={styles.searchIcon} onClick={handleSearchClick}>
         <IoSearch />
       </div>
       <input

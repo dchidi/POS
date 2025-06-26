@@ -1,21 +1,13 @@
 :root {
-  /* --bg-app: #1c202c;
-  --bg-default: #6f7382;
-  --bg-hover: #5a5e6d;
-  --bg-active: #252a3d;
-  --border-active: #4c5164;
+  --primary: rgb(119, 207, 180);
+  --primary-100: rgba(191, 246, 229, 0.463);
 
-  --text-default: #323540;
-  --text-hover: #b6b9cd;
-  --text-active: #c1c8e5;
-  --text-app: #ffffffde;
+  --black: #1c202c;
+  --black-100: #cccc;
+  --black-200: #45474d;
 
-  --ripple: rgba(255, 255, 255, 0.5);
-  --box-shadow: rgba(0, 0, 0, 0.15);
-  --active-bar: rgba(105, 174, 153, 0.537); */
-  --text-primary: #000;
-
-  --bg-primary: #fff;
+  --white: #ffffff;
+  --white-100: #f9f9f9;
 }
 
 /* reset.css */
@@ -63,8 +55,8 @@ body {
   line-height: 1.5;
   font-weight: 400;
   font-family: system-ui, sans-serif;
-  color: var(--text-primary);
-  background-color: var(--bg-primary);
+  color: var(--black);
+  background-color: var(--white-100);
   font-size: 10px;
   /* Disable selection on page */
   user-select: none; /* Standard syntax */

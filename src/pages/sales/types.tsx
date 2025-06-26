@@ -1,5 +1,5 @@
 export type SalesData = {
-  img_url: string;
+  img_url?: string;
   label: string;
   name: string;
   category_id: string;

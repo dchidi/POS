@@ -31,32 +31,24 @@ const Sales = () => {
             </Column>
           </Column>
         )}
-        <Row gap={10} wrap="wrap" className={styles.content} justify="center">
-          {/* <h2>All Menu</h2> */}
-          {/* <ProductItem
-            callback={() => {}}
-            label="Garlic Bread"
-            category_id={"1"}
-            sub_category_id={"1"}
-            price={1200}
-            image_url="/burger1.jpg"
-            // quantity_left={120}
-            product_id="1"
-          /> */}
-          {[...new Array(50).values()].map((_, k) => (
-            <ProductItem
-              callback={() => {}}
-              label="Delux Crispy Vegan Burger With Onion Rings"
-              category_id={"1"}
-              sub_category_id={"1"}
-              price={2.22}
-              image_url="/burger1.jpg"
-              quantity_left={120}
-              product_id="1"
-              key={k}
-            />
-          ))}
-        </Row>
+        <Column className={styles.contentContainer}>
+          <div className={styles.activeMenu}>All Menu</div>
+          <Row gap={10} wrap="wrap" className={styles.content} justify="center">
+            {[...new Array(50).values()].map((_, k) => (
+              <ProductItem
+                callback={() => {}}
+                label="Delux Crispy Vegan Burger With Onion Rings"
+                category_id={"1"}
+                sub_category_id={"1"}
+                price={2.22}
+                image_url="/burger1.jpg"
+                quantity_left={120}
+                product_id="1"
+                key={k}
+              />
+            ))}
+          </Row>
+        </Column>
       </Row>
       <Modal isOpen={false} onClose={() => {}} hasCloseBtn={false}>
         <ProductDetails />

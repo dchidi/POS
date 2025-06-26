@@ -5,7 +5,7 @@
   z-index: 10;
   background-color: var(--bg-app);
   padding: 0.5rem 1rem 1rem 1rem;
-  border-bottom: solid 1px var(--text-default);
+  border-bottom: solid 1px var(--black-100);
   margin-bottom: 1rem;
   width: 100%;
 }
@@ -28,6 +28,9 @@
 .currencyUI {
   padding: 10px 1rem 0 0;
   font-weight: 600;
+}
+.appName {
+  font-size: 1rem;
 }
 
 /* Small devices (landscape phones, 576px and up) */

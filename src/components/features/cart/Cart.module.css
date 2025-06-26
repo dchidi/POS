@@ -1,5 +1,22 @@
 /* Mobile view */
 
+.orderContent {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  padding: 0 0.5rem;
+  padding-bottom: 2rem;
+  overflow-y: auto;
+}
+
+.orderContent::-webkit-scrollbarr {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.orderContentContainer {
+  overflow-y: auto; /* Ensure scrolling works */
+  height: 80vh;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   /* Adjust styles for small screens (e.g., larger phones) */

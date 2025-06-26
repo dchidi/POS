@@ -107,10 +107,12 @@ const Cart: React.FC<{ className?: string }> = ({ className }) => {
       <Column className={styles.orderDetails}>
         <h4>Order Details</h4>
 
-        <Column className={styles.orderContent}>
-          {[...new Array(15).values()].map((_, k: any) => (
-            <CartItem key={k} counter={k + 1} />
-          ))}
+        <Column className={styles.orderContentContainer}>
+          <Column className={styles.orderContent}>
+            {[...new Array(15).values()].map((_, k: any) => (
+              <CartItem key={k} counter={k + 1} />
+            ))}
+          </Column>
         </Column>
       </Column>
     </Column>

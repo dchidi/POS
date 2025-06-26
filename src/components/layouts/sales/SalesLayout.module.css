@@ -17,7 +17,9 @@
   }
   .cart {
     flex: 1;
-    background-color: yellow;
+    background-color: var(--white);
+    border-left: solid 1px var(--black-100);
+    padding: 1rem;
   }
 }
 

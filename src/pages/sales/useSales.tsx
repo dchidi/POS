@@ -44,6 +44,48 @@ const dummyData: SalesData[] = [
     category_id: "2",
     sub_category_id: "1",
   },
+  {
+    img_url: "",
+    label: "All Menu",
+    name: "all",
+    category_id: "1",
+    sub_category_id: "1",
+  },
+  {
+    img_url: "",
+    label: "Bread",
+    name: "bread",
+    category_id: "2",
+    sub_category_id: "1",
+  },
+  {
+    img_url: "",
+    label: "Pizza",
+    name: "pizza",
+    category_id: "2",
+    sub_category_id: "1",
+  },
+  {
+    img_url: "",
+    label: "Pastries",
+    name: "pastries",
+    category_id: "2",
+    sub_category_id: "1",
+  },
+  {
+    img_url: "",
+    label: "Cake22",
+    name: "cake",
+    category_id: "2",
+    sub_category_id: "1",
+  },
+  {
+    img_url: "",
+    label: "Burger22",
+    name: "burger",
+    category_id: "2",
+    sub_category_id: "1",
+  },
 ];
 
 const useSales = (): UseSales => {

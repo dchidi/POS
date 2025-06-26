@@ -1,13 +1,13 @@
 import { CiForkAndKnife } from "react-icons/ci";
-import MenuItem from "../../components/ui/menu_item/MenuItem";
 import { GiSlicedBread } from "react-icons/gi";
-import { Column, Row } from "../../components/layouts/row_column";
 import styles from "./Sales.module.css";
-import ProductItem from "../../components/ui/product_item/ProductItem";
-import Modal from "../../components/ui/modal/Modal";
-import { ProductDetails } from "../../components/ui/product_item/ProductDetails";
-import Receipt from "../../components/features/payment/Receipt";
-import PrinterSettings from "../../components/features/system_tools/PrinterSettings";
+import MenuItem from "../../../components/ui/menu_item/MenuItem";
+import { Column, Row } from "../../../components/layouts/row_column";
+import ProductItem from "../../../components/ui/product_item/ProductItem";
+import Modal from "../../../components/ui/modal/Modal";
+import { ProductDetails } from "../../../components/ui/product_item/ProductDetails";
+import PrinterSettings from "../../../components/features/system_tools/PrinterSettings";
+import Receipt from "../../../components/features/payment/Receipt";
 
 // src/pages/Dashboard.tsx
 const Sales = () => {
@@ -17,6 +17,7 @@ const Sales = () => {
   const dummyMenu = [
     {
       label: "All Menu",
+      name: "all",
       category_id: "1",
       sub_category_id: "1",
       isActive: false,
@@ -24,6 +25,7 @@ const Sales = () => {
     },
     {
       label: "Bread",
+      name: "brand",
       category_id: "2",
       sub_category_id: "1",
       isActive: false,
@@ -31,6 +33,7 @@ const Sales = () => {
     },
     {
       label: "Pizza",
+      name: "pizza",
       category_id: "2",
       sub_category_id: "1",
       isActive: false,
@@ -38,6 +41,7 @@ const Sales = () => {
     },
     {
       label: "Pastries",
+      name: "pastries",
       category_id: "2",
       sub_category_id: "1",
       isActive: false,
@@ -45,6 +49,7 @@ const Sales = () => {
     },
     {
       label: "Chicken",
+      name: "chicken",
       category_id: "2",
       sub_category_id: "1",
       isActive: false,
@@ -52,6 +57,7 @@ const Sales = () => {
     },
     {
       label: "Beef",
+      name: "beef",
       category_id: "2",
       sub_category_id: "1",
       isActive: false,
@@ -59,6 +65,7 @@ const Sales = () => {
     },
     {
       label: "Cake",
+      name: "cake",
       category_id: "2",
       sub_category_id: "1",
       isActive: false,
@@ -66,13 +73,7 @@ const Sales = () => {
     },
     {
       label: "Burger",
-      category_id: "2",
-      sub_category_id: "1",
-      isActive: false,
-      icon: <GiSlicedBread />,
-    },
-    {
-      label: "Cake",
+      name: "burger",
       category_id: "2",
       sub_category_id: "1",
       isActive: false,

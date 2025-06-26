@@ -2,7 +2,7 @@ import type React from "react";
 import styles from "./ProductItem.module.css";
 import { clsx } from "clsx";
 import { Column, Row } from "../../layouts/row_column";
-import { CURRENCY } from "../../../config";
+import { CURRENCY } from "../../../app_config";
 import type { ProductItemProps } from "./types";
 import { useNumberFormatter } from "../../../hooks/useNumberFormatter";
 
