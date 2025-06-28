@@ -25,6 +25,7 @@
   font-size: 1rem;
   font-weight: 600;
   padding: 0 0.5rem;
+  color: var(--black);
 }
 
 .btn:hover,

@@ -35,7 +35,7 @@ export const ProductDetails = () => {
     ingredients: `Pea protein, lentils, mushrooms, sunflower oil, beetroot extract
             (for color), smoked paprika, garlic powder, onion powder, sea salt,
             Whole wheat flour, water, yeast, sugar, sesame seeds`,
-    qty: 1,
+    qty: 3,
     options: [
       {
         title: "Size",
@@ -82,8 +82,7 @@ export const ProductDetails = () => {
         </Column>
       </Column>
       <Column className={styles.modalBody}>
-        <Row justify="space-between">
-          <div className={styles.lbl}>Qty</div>
+        <Row justify="end">
           <QuantitySelector
             category_id="1"
             product_id="1"
@@ -94,12 +93,6 @@ export const ProductDetails = () => {
           />
         </Row>
         <Column gap={10}>
-          {/* <div className={styles.lbl}>Size</div>
-          <Row wrap="wrap" gap={10}>
-            <Items name="Regular" amount={2.5} isSelected={true} />
-            <Items name="Large" amount={4} />
-            <Items name="Small" amount={2} />
-          </Row> */}
           {options.map((item, i) => (
             <Column key={i}>
               <div className={styles.lbl}>{item.title}</div>

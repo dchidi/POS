@@ -3,7 +3,6 @@ import { Column, Row } from "../../components/layouts/row_column";
 import styles from "./Sales.module.css";
 import ProductItem from "../../components/ui/product_item/ProductItem";
 import Modal from "../../components/ui/modal/Modal";
-import { ProductDetails } from "../../components/ui/product_item/ProductDetails";
 import Receipt from "../../components/features/payment/Receipt";
 import PrinterSettings from "../../components/features/system_tools/PrinterSettings";
 import useSales from "./useSales";
@@ -50,9 +49,7 @@ const Sales = () => {
           </Row>
         </Column>
       </Row>
-      <Modal isOpen={false} onClose={() => {}} hasCloseBtn={false}>
-        <ProductDetails />
-      </Modal>
+
       <Modal isOpen={false} onClose={() => {}} hasCloseBtn={false}>
         {/* Put printer settings on settings page and it should update local storage */}
         <PrinterSettings onPaperSizeChange={() => {}} />

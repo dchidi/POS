@@ -1,9 +1,12 @@
 :root {
   --primary: #fe7c3e;
   --primary-100: rgba(255, 131, 54, 0.252);
+  --primary-150: rgba(255, 156, 95, 0.847);
 
   --secondary: rgb(28, 147, 111);
   --secondary-100: rgba(191, 246, 229, 0.463);
+  --secondary-150: rgb(200, 242, 229);
+  --secondary-200: rgb(51, 113, 95);
 
   --black: #1c202c;
   --black-100: #cccc;

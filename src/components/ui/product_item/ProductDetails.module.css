@@ -1,43 +1,43 @@
 /* Mobile view */
 .root {
   width: 300px;
+  background-color: var(--black);
+  color: var(--white-100);
 }
 img.productImg {
-  width: 60px;
+  width: 80px;
   object-fit: scale-down;
   border-radius: 6px;
 }
 .modalTop {
   background-color: rgb(255, 255, 255);
-  color: var(--bg-app);
-  border-radius: 8px 8px 0 0;
+  color: var(--black);
+  border-radius: 6px 6px 0 0;
   padding: 0.5rem 1rem;
 }
 .itemName,
 .itemDescription,
 .lbl,
 .lbl2 {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
-.itemName {
-  font-weight: 600;
-}
+
 .amount {
   font-size: 1rem;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 .itemDescription {
   margin-top: 0.5rem;
 }
 .itemDescription h5 {
   margin: 0;
+  font-size: 0.9rem;
+  color: var(--black-200);
 }
 .modalBody {
   padding: 1.2rem 1rem 1rem 1rem;
 }
-.lbl,
-.lbl2 {
-  font-weight: 600;
+.lbl {
   margin-top: 10px;
 }
 .lbl {
@@ -47,28 +47,28 @@ img.productImg {
   margin-top: 0;
 }
 .qtySelector {
-  background-color: rgba(153, 153, 153, 0.033);
-  border: solid 1px #9999994b;
+  background-color: var(--white);
   padding: 0.5rem;
-  border-radius: 100px;
+  border-radius: 4px;
 }
 
 .item {
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   width: calc(96% / 2);
   border: solid 1px #9999994b;
   padding: 0.5rem 1rem;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
 }
 .active {
-  background-color: rgb(200, 242, 229);
-  color: var(--bg-app);
-  border: solid 2px rgb(51, 113, 95);
+  background-color: var(--secondary-150);
+  color: var(--black);
+  border: solid 2px var(--secondary-200);
 }
 .totalContainer {
   padding: 1rem;
-  background-color: #22293dad;
+  background-color: var(--black-200);
+  font-weight: 600;
 }
 .btnWrapper {
   padding: 1rem;

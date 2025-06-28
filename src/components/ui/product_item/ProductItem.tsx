@@ -5,6 +5,9 @@ import { Column, Row } from "../../layouts/row_column";
 import type { ProductItemProps } from "./types";
 import { useNumberFormatter } from "../../../hooks/useNumberFormatter";
 import CurrencyUI from "../currency_formatter/CurrencyUI";
+import Modal from "../modal/Modal";
+import { ProductDetails } from "./ProductDetails";
+import { useState } from "react";
 
 const ProductItem: React.FC<ProductItemProps> = ({
   callback,
@@ -19,13 +22,20 @@ const ProductItem: React.FC<ProductItemProps> = ({
 }) => {
   const css = clsx(styles.root, className);
   const { formatCurrency } = useNumberFormatter();
+  const [openModal, setModalToggle] = useState(false);
+  const onClickHandler = () => {
+    // trigger callback if needed
+    callback({ category_id, sub_category_id, product_id });
+    // fetch endpoint data
+    // open modal
+    setModalToggle(true);
+  };
+  const closeModal = () => {
+    setModalToggle(false);
+  };
   return (
     <>
-      <Column
-        onClick={() => callback({ category_id, sub_category_id, product_id })}
-        className={css}
-        justify="center"
-      >
+      <Column onClick={onClickHandler} className={css} justify="center">
         <Row align="center" justify="center">
           <img
             src={image_url}
@@ -40,6 +50,9 @@ const ProductItem: React.FC<ProductItemProps> = ({
           <CurrencyUI amount={formatCurrency(price)} className={styles.price} />
         </Column>
       </Column>
+      <Modal isOpen={openModal} onClose={closeModal} hasCloseBtn={false}>
+        <ProductDetails />
+      </Modal>
     </>
   );
 };

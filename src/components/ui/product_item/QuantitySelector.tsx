@@ -33,12 +33,15 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = ({
   return (
     <Row className={root} gap={20} align="center">
       <Row className={styles.actions} gap={10} align="center">
-        <button className={styles.deleteBtn} onClick={fnText}>
-          <MdDelete />
-        </button>
-        <button className={styles.btn} onClick={fnText}>
-          <FaMinus />
-        </button>
+        {quantity === 1 ? (
+          <button className={styles.deleteBtn} onClick={fnText}>
+            <MdDelete />
+          </button>
+        ) : (
+          <button className={styles.btn} onClick={fnText}>
+            <FaMinus />
+          </button>
+        )}
         <div className={styles.counter}>{quantity}</div>
         <button className={styles.btn}>
           <FaPlus />
