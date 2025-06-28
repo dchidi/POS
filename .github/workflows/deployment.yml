@@ -32,7 +32,7 @@ jobs:
           server: ${{ secrets.NAMECHEAP_HOST }}
           username: ${{ secrets.NAMECHEAP_USERNAME }}
           password: ${{ secrets.NAMECHEAP_PASSWORD }}
-          local-dir: build/
+          local-dir: dist/
           exclude: |
             **/.git*
             **/.git*/**
