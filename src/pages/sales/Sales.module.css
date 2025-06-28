@@ -48,7 +48,7 @@
   .sideMenuContainer {
     width: 100vw;
     justify-content: center !important;
-    padding-right: 10px;
+    padding-right: 15px;
   }
   .sideMenu {
     gap: 10px;
