@@ -13,29 +13,36 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
+          node-version: "20"
 
       - name: Install dependencies
         run: npm install
 
       - name: Build React app
-        run: npm run build
+        run: |
+          mkdir -p dist
+          npm run build || (echo "Build failed" && exit 1)
 
-      - name: List build files (debug)
-        run: ls -R dist
+      - name: Verify build output
+        run: |
+          echo "Build contents:"
+          ls -la dist/
+          echo "Total files:"
+          find dist/ -type f | wc -l
 
       - name: Deploy to Namecheap
+        if: success()
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.NAMECHEAP_HOST }}
           username: ${{ secrets.NAMECHEAP_USERNAME }}
           password: ${{ secrets.NAMECHEAP_PASSWORD }}
-          local-dir: dist # Removed trailing slash
+          local-dir: dist
           exclude: |
             **/.git*
             **/.git*/**
@@ -43,8 +50,3 @@ jobs:
             **/*.md
             **/*.json
             **/*.config.*
-            **/src/**
-            **/public/**
-            **/test/**
-            **/tests/**
-            **/__tests__/**
