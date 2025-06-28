@@ -1,1 +1,0 @@
-import{u as e,c as i,j as n}from"./index-Df3_eHfw.js";const c=()=>{const{login:s}=e(),o=i(),t=()=>{s(),o("/app/sales")};return n.jsxs("div",{children:[n.jsx("h2",{children:"Login"}),n.jsx("button",{onClick:t,children:"Log In"})]})};export{c as default};
