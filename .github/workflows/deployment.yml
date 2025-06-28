@@ -1,0 +1,45 @@
+name: Deploy to Namecheap
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      NODE_OPTIONS: "--max_old_space_size=4096"
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build React app
+        run: npm run build
+
+      - name: Deploy to Namecheap
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.NAMECHEAP_HOST }}
+          username: ${{ secrets.NAMECHEAP_USERNAME }}
+          password: ${{ secrets.NAMECHEAP_PASSWORD }}
+          local-dir: build/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/public/**
+            **/src/**
+            package-lock.json
+            package.json
+            README.md
+            build.zip

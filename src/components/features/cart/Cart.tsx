@@ -113,7 +113,14 @@ const Cart: React.FC<{ className?: string }> = ({ className }) => {
       </Column>
 
       <Column className={styles.orderDetails}>
-        <h4>Order Details</h4>
+        <Row
+          align="center"
+          justify="space-between"
+          className={styles.orderHeader}
+        >
+          <h4>Order Details</h4>
+          <button className={styles.btnTransaction}>Process Transaction</button>
+        </Row>
 
         <Column className={styles.orderContentContainer}>
           <Column className={styles.orderContent}>
