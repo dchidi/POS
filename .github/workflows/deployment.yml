@@ -1,4 +1,4 @@
-name: Deploy to Namecheap
+name: Deploy to Namecheap (Vite App)
 
 on:
   push:
@@ -9,7 +9,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
-      NODE_OPTIONS: "--max_old_space_size=4096"
+      NODE_OPTIONS: "--max_old_space_size=4096" # Include this line
 
     steps:
       - name: Checkout code
@@ -18,29 +18,28 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "14"
+          node-version: "18"
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build React app
+      - name: Build Vite app
         run: npm run build
 
-      - name: Deploy to Namecheap
+      - name: Check if dist folder exists
+        run: ls -la dist/
+
+      - name: Deploy to Namecheap via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.NAMECHEAP_HOST }}
           username: ${{ secrets.NAMECHEAP_USERNAME }}
           password: ${{ secrets.NAMECHEAP_PASSWORD }}
           local-dir: dist/
-          server-dir: /pos.unidezk.com/
           exclude: |
             **/.git*
-            **/.git*/**
             **/node_modules/**
-            **/public/**
-            **/src/**
-            package-lock.json
-            package.json
             README.md
-            build.zip
+            package*.json
+            tsconfig*.json
+          dangerous-clean-slate: true
