@@ -15,7 +15,7 @@ interface QuantitySelectorProps {
   unit_price: number;
 }
 const QuantitySelector: React.FC<QuantitySelectorProps> = ({
-  isItemSelected = false,
+  // isItemSelected = false,
   product_id,
   category_id,
   sub_category_id,
@@ -24,7 +24,7 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = ({
   unit_price = 0,
 }) => {
   const root = clsx(styles.root, className);
-  const highlight = clsx(styles.btn, { [styles.highlight]: isItemSelected });
+  // const highlight = clsx(styles.btn, { [styles.highlight]: isItemSelected });
 
   const fnText = () => {
     console.log(product_id, category_id, sub_category_id, unit_price);
@@ -37,11 +37,11 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = ({
           <MdDelete />
         </button>
         <button className={styles.btn} onClick={fnText}>
-          <FaMinus color="black" />
+          <FaMinus />
         </button>
         <div className={styles.counter}>{quantity}</div>
-        <button className={highlight}>
-          <FaPlus color="black" />
+        <button className={styles.btn}>
+          <FaPlus />
         </button>
       </Row>
       {/* <div>

@@ -17,7 +17,10 @@ export const CartItem = ({ counter }: { counter: number }) => {
     <Row className={styles.cartItem}>
       <Column>
         <p>{counter}. Delux crispy vegan burger</p>
-        <CurrencyUI amount={formatCurrency(9999999.99)} />
+        <CurrencyUI
+          amount={formatCurrency(9999999.99)}
+          className={styles.amount}
+        />
         <QuantitySelector
           category_id="1"
           product_id="1"
@@ -47,37 +50,41 @@ const Cart: React.FC<{ className?: string }> = ({ className }) => {
         <MenuItem
           callback={() => {}}
           label="Online Orders"
+          name="online_orders"
           category_id={"1"}
           sub_category_id={"1"}
           isActive={false}
-          icon={<MdOutlineDeliveryDining />}
+          icon={<MdOutlineDeliveryDining size={20} />}
           className={styles.sideAction}
         />
         <MenuItem
           callback={() => {}}
           label="Customers"
+          name="customers"
           category_id={"1"}
           sub_category_id={"1"}
           isActive={false}
-          icon={<RiGroupLine />}
+          icon={<RiGroupLine size={15} />}
           className={styles.sideAction}
         />
         <MenuItem
           callback={() => {}}
           label="Discount"
+          name="discount"
           category_id={"1"}
           sub_category_id={"1"}
           isActive={false}
-          icon={<CiDiscount1 />}
+          icon={<CiDiscount1 size={20} />}
           className={styles.sideAction}
         />
         <MenuItem
           callback={() => {}}
           label="Save Bill"
+          name="save_bill"
           category_id={"1"}
           sub_category_id={"1"}
           isActive={false}
-          icon={<BsSave2 />}
+          icon={<BsSave2 size={15} />}
           className={styles.sideAction}
         />
       </Row>
@@ -104,6 +111,7 @@ const Cart: React.FC<{ className?: string }> = ({ className }) => {
           />
         </Row>
       </Column>
+
       <Column className={styles.orderDetails}>
         <h4>Order Details</h4>
 

@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { CURRENCY } from "../../../app_config";
 import styles from "./CurrencyUI.module.css";
+import { Row } from "../../layouts/row_column";
 
 const CurrencyUI: React.FC<{
   amount: string;
@@ -9,10 +10,10 @@ const CurrencyUI: React.FC<{
 }> = ({ amount = 0.0, className = "", showCurrencySymbol = true }) => {
   const rootCss = clsx(styles.root, className);
   return (
-    <div className={rootCss}>
+    <Row align="center" className={rootCss}>
       {showCurrencySymbol && CURRENCY.symbol}
       {amount}
-    </div>
+    </Row>
   );
 };
 export default CurrencyUI;

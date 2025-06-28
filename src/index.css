@@ -1,9 +1,13 @@
 :root {
-  --primary: rgb(119, 207, 180);
-  --primary-100: rgba(191, 246, 229, 0.463);
+  --primary: #fe7c3e;
+  --primary-100: rgba(255, 131, 54, 0.252);
+
+  --secondary: rgb(28, 147, 111);
+  --secondary-100: rgba(191, 246, 229, 0.463);
 
   --black: #1c202c;
   --black-100: #cccc;
+  --black-150: #888;
   --black-200: #45474d;
 
   --white: #ffffff;
@@ -56,7 +60,6 @@ body {
   font-weight: 400;
   font-family: system-ui, sans-serif;
   color: var(--black);
-  background-color: var(--white-100);
   font-size: 10px;
   /* Disable selection on page */
   user-select: none; /* Standard syntax */
@@ -98,5 +101,57 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* Adjust styles for small screens (e.g., larger phones) */
+}
+
+/* all mobile */
+@media (max-width: 767px) {
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Small laptops/desktops */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Large desktops */
+}
+
+/* 2K and 4K screens (optional) */
+@media (min-width: 1600px) {
+  /* Ultra-wide monitors */
+  body {
+    padding: 0;
+    background-color: var(--black);
+    padding: 0 12%;
+    background-image: url(../public/app_bg.png);
+    background-size: 100%;
+  }
+}
+
+@media (min-width: 1800px) {
+  /* Ultra-wide monitors */
+  body {
+    padding: 0;
+    background-color: var(--black);
+    padding: 0 15%;
+  }
+}
+
+@media (min-width: 2000px) {
+  /* Ultra-wide monitors */
+  body {
+    padding: 0;
+    background-color: var(--black);
+    padding: 0 20%;
   }
 }

@@ -13,8 +13,9 @@ const MenuItem: React.FC<MenuItemProps> = ({
   // name = "",
   category_id,
   sub_category_id,
+  icon,
 }) => {
-  const css = clsx(styles.root, className, { [styles.active]: isActive });
+  const css = clsx(styles.root, { [styles.active]: isActive }, className);
 
   return (
     <Row
@@ -24,7 +25,8 @@ const MenuItem: React.FC<MenuItemProps> = ({
       justify="center"
     >
       <Column align="center" justify="center" gap={2}>
-        <img src={img_url} />
+        {img_url && <img src={img_url} />}
+        {icon}
         <Row className={styles.label} wrap="wrap">
           {label}
         </Row>

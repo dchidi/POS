@@ -2,9 +2,9 @@ import type React from "react";
 import styles from "./ProductItem.module.css";
 import { clsx } from "clsx";
 import { Column, Row } from "../../layouts/row_column";
-import { CURRENCY } from "../../../app_config";
 import type { ProductItemProps } from "./types";
 import { useNumberFormatter } from "../../../hooks/useNumberFormatter";
+import CurrencyUI from "../currency_formatter/CurrencyUI";
 
 const ProductItem: React.FC<ProductItemProps> = ({
   callback,
@@ -37,10 +37,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
         </Row>
         <Column className={styles.details} gap={3} align="center">
           <div className={styles.label}>{label}</div>
-          <Row align="center" className={styles.price}>
-            {CURRENCY.symbol}
-            {formatCurrency(price)}
-          </Row>
+          <CurrencyUI amount={formatCurrency(price)} className={styles.price} />
         </Column>
       </Column>
     </>

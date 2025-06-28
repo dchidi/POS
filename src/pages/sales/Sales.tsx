@@ -34,10 +34,10 @@ const Sales = () => {
         <Column className={styles.contentContainer}>
           <div className={styles.activeMenu}>All Menu</div>
           <Row gap={10} wrap="wrap" className={styles.content} justify="center">
-            {[...new Array(50).values()].map((_, k) => (
+            {[...new Array(20).values()].map((_, k) => (
               <ProductItem
                 callback={() => {}}
-                label="Delux Crispy Vegan Burger With Onion Rings"
+                label="Delux Crispy Vegan Burger With Onion Rings with source"
                 category_id={"1"}
                 sub_category_id={"1"}
                 price={2.22}

@@ -20,6 +20,7 @@
 .menuToggleIcon {
   cursor: pointer;
   font-size: 1.3rem;
+  color: #000;
 }
 .counter {
   font-size: 0.8rem;
@@ -31,6 +32,7 @@
 }
 .appName {
   font-size: 1rem;
+  color: #000;
 }
 
 /* Small devices (landscape phones, 576px and up) */

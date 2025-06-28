@@ -1,15 +1,15 @@
 /* Mobile view */
 .root {
-  width: min(90%, 280px);
-  min-height: 220px;
+  width: min(90%, 260px);
+  min-height: 270px;
   background-color: white;
-  color: var(--bg-active);
+  color: var(--black-200);
   border-radius: 8px;
   font-size: 0.8rem;
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border: solid 1px rgba(0, 0, 0, 0.121);
 }
 
 .root img {
@@ -29,8 +29,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%; /* Adjust width as needed */
+  max-height: 3.2rem;
   white-space: normal; /* Allow text to wrap */
+  padding: 1rem;
 }
+
 .price {
   font-size: 0.8rem;
   color: var(--bg-app);

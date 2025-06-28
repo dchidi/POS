@@ -9,4 +9,5 @@ export interface MenuItemProps extends SalesData {
   isActive: boolean;
   callback: (args: MenuItemReturnProps) => void;
   className?: string;
+  icon?: React.ReactNode;
 }
