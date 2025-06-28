@@ -10,7 +10,7 @@ export interface ProductItemProps {
   price: number;
   sub_category_id: string;
   category_id: string;
-  callback: (args: ProductItemReturnProps) => void;
+  callback?: (args: ProductItemReturnProps) => void;
   className?: string;
   quantity_left?: number;
   product_id: string;

@@ -26,7 +26,9 @@ export const Items: React.FC<{
     </Row>
   );
 };
-export const ProductDetails = () => {
+export const ProductDetails: React.FC<{ callback?: () => void }> = ({
+  callback,
+}) => {
   const { formatCurrency } = useNumberFormatter();
   const { image, item, amount, ingredients, qty, options } = {
     image: "/burger1.jpg",
@@ -121,7 +123,9 @@ export const ProductDetails = () => {
         justify="center"
         className={styles.btnWrapper}
       >
-        <button className={styles.btnCancel}>Cancel</button>
+        <button className={styles.btnCancel} onClick={callback}>
+          Cancel
+        </button>
         <button className={styles.btnAdd}>Add</button>
       </Row>
     </Column>

@@ -10,7 +10,7 @@ import { ProductDetails } from "./ProductDetails";
 import { useState } from "react";
 
 const ProductItem: React.FC<ProductItemProps> = ({
-  callback,
+  // callback,
   category_id,
   sub_category_id,
   product_id,
@@ -25,7 +25,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
   const [openModal, setModalToggle] = useState(false);
   const onClickHandler = () => {
     // trigger callback if needed
-    callback({ category_id, sub_category_id, product_id });
+    console.log({ category_id, sub_category_id, product_id });
     // fetch endpoint data
     // open modal
     setModalToggle(true);
@@ -51,7 +51,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
         </Column>
       </Column>
       <Modal isOpen={openModal} onClose={closeModal} hasCloseBtn={false}>
-        <ProductDetails />
+        <ProductDetails callback={closeModal} />
       </Modal>
     </>
   );
