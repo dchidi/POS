@@ -39,6 +39,10 @@ jobs:
             **/node_modules/**
             **/public/**
             **/src/**
+            **/vite.config.*  # Exclude Vite config files
+            **/tsconfig.*    # Exclude TypeScript config
+            **/*.local       # Exclude local env files
+            **/.env*         # Exclude all environment files
             package-lock.json
             package.json
             README.md
