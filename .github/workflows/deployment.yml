@@ -26,20 +26,25 @@ jobs:
       - name: Build React app
         run: npm run build
 
+      - name: List build files (debug)
+        run: ls -R dist
+
       - name: Deploy to Namecheap
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.NAMECHEAP_HOST }}
           username: ${{ secrets.NAMECHEAP_USERNAME }}
           password: ${{ secrets.NAMECHEAP_PASSWORD }}
-          local-dir: dist/
+          local-dir: dist # Removed trailing slash
           exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
-            **/public/**
+            **/*.md
+            **/*.json
+            **/*.config.*
             **/src/**
-            package-lock.json
-            package.json
-            README.md
-            dist.zip
+            **/public/**
+            **/test/**
+            **/tests/**
+            **/__tests__/**
