@@ -43,6 +43,7 @@ jobs:
           username: ${{ secrets.NAMECHEAP_USERNAME }}
           password: ${{ secrets.NAMECHEAP_PASSWORD }}
           local-dir: dist/
+          server-dir: pos.unidezk.com/
           exclude: |
             **/.git*
             **/.git*/**
