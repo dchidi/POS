@@ -86,8 +86,9 @@ img.productImg {
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .btnCancel {
-  background-color: var(--text-active);
-  color: var(--bg-app);
+  border: solid 1px var(--black-200);
+  color: var(--white);
+  background-color: transparent;
 }
 .btnAdd {
   border: none;
