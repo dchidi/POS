@@ -46,15 +46,18 @@
   align-items: center;
   font-size: 1rem;
   font-weight: 600;
+  color: var(--black);
   background-color: var(--white);
 }
 .actionBtnToggle {
   flex: 3.8;
   background-color: var(--black-100);
-  color: var(--black);
 }
 .btn {
   padding: 1rem;
   border: none;
   background-color: var(--primary);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.8rem;
 }
