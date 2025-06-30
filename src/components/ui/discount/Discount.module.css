@@ -28,7 +28,7 @@
 }
 .keys {
   border: solid 1px var(--black-100);
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   text-align: center;
   font-size: 1rem;
   font-weight: 600;
@@ -40,7 +40,7 @@
 .actionBtnToggle {
   flex: 1;
   border: solid 1px var(--black-100);
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +50,7 @@
   background-color: var(--white);
 }
 .actionBtnToggle {
-  flex: 3.8;
+  flex: 3;
   background-color: var(--black-100);
 }
 .btn {

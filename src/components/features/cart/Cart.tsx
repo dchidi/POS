@@ -40,7 +40,7 @@ export const CartItem = ({ counter }: { counter: number }) => {
 const Cart: React.FC<{ className?: string }> = ({ className }) => {
   const css = clsx(styles.root, className);
 
-  const [showDiscount, setShowDiscount] = useState(false);
+  const [showDiscount, setShowDiscount] = useState(true);
   const closeDiscountModal = () => setShowDiscount(false);
 
   const { formatCurrency } = useNumberFormatter();
