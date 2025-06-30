@@ -34,6 +34,7 @@
   font-weight: 600;
   aspect-ratio: 1/1;
   background-color: var(--white);
+  color: var(--black-200);
 }
 .actionBtn,
 .actionBtnToggle {
