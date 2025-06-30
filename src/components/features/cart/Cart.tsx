@@ -40,7 +40,8 @@ export const CartItem = ({ counter }: { counter: number }) => {
 const Cart: React.FC<{ className?: string }> = ({ className }) => {
   const css = clsx(styles.root, className);
 
-  const [showDiscount, setShowDiscount] = useState(true);
+  // This is a duplicate of logic both in quantitySelector and here. Optimize it
+  const [showDiscount, setShowDiscount] = useState(false);
   const closeDiscountModal = () => setShowDiscount(false);
 
   const { formatCurrency } = useNumberFormatter();
