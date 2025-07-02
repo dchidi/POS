@@ -34,7 +34,9 @@
   font-size: 1rem;
   color: #000;
 }
-
+.logo {
+  width: 2rem;
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   /* Adjust styles for small screens (e.g., larger phones) */

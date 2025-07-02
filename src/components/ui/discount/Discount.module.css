@@ -1,7 +1,6 @@
 .root {
   background-color: var(--white);
   color: var(--black-200);
-  /* min-width: 300px; */
 }
 .titleLabel {
   color: var(--black-150);
@@ -12,11 +11,9 @@
   padding-bottom: 0.5rem;
   font-size: 1.8rem;
   font-weight: 600;
-  /* position: relative; */
 }
 .discountLabel span {
   font-size: 0.8rem;
-  /* position: absolute; */
   margin-top: 6%;
   margin-left: 2%;
 }
@@ -24,7 +21,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  /* gap: 8px; */
 }
 .keys {
   border: solid 1px var(--black-100);

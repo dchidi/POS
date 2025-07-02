@@ -1,0 +1,27 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out,
+    transform 0.15s ease-in-out;
+  cursor: pointer;
+  width: max-content;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.default {
+  background-color: transparent;
+}
+.primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.root:hover {
+  background-color: var(--primary-100);
+  transform: translateY(-2px);
+  transition: transform 0.5s, opacity 1s;
+}

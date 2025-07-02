@@ -1,12 +1,13 @@
 // components/layouts/AuthLayout.tsx
 import { Outlet } from "react-router-dom";
+import { Column } from "../row_column";
+import styles from "./AuthLayout.module.css";
 
 const AuthLayout = () => {
   return (
-    <div style={{ padding: "2rem" }}>
-      <h2>Auth Area</h2>
+    <Column className={styles.root} justify="center" align="center">
       <Outlet />
-    </div>
+    </Column>
   );
 };
 

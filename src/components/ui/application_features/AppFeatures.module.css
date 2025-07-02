@@ -1,0 +1,11 @@
+.menuContainer {
+  background-color: var(--white);
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+.mainMenu {
+  margin-top: 1rem;
+}
+.submenu {
+  padding-left: 1rem;
+}

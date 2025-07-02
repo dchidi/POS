@@ -68,10 +68,6 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = ({
             <CiDiscount1 size={16} />
           </button>
         </Row>
-        {/* <div>
-        {CURRENCY.symbol}
-        {formatCurrency(unit_price * quantity)}
-      </div> */}
       </Row>
       <Modal
         isOpen={showDiscount}
