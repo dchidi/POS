@@ -6,9 +6,9 @@ import { IoIosLock } from "react-icons/io";
 import Button from "../components/ui/button/Button";
 import { InputText } from "../components/ui/input/InputText";
 import { InputPassword } from "../components/ui/input/InputPassword";
-import { InputPassCode } from "../components/ui/input/InputPasscode";
 import { useState } from "react";
 import { Loading } from "../components/ui/loading/Loading";
+import { InputPassCode } from "../components/ui/input/InputPassCode";
 
 const Login = () => {
   const [loginUI, setLoginUI] = useState<"login" | "loading" | "passcode">(
