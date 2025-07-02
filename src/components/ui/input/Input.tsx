@@ -1,12 +1,26 @@
-import { Row } from "../../layouts/row_column";
+import { Column, Row } from "../../layouts/row_column";
 import styles from "./Input.module.css";
 
-interface InputProps {
-  type: "text" | "password" | "passcode";
+type InputType = "text" | "password" | "passcode";
+
+interface BaseInputProps {
   label?: string;
   placeholder?: string;
-  passcodeLength?: number;
+  className?: string;
 }
+
+interface TextPasswordInputProps extends BaseInputProps {
+  type: Exclude<InputType, "passcode">;
+  passcodeLength?: never;
+}
+
+interface PasscodeInputProps extends BaseInputProps {
+  type: "passcode";
+  passcodeLength: number;
+}
+
+type InputProps = TextPasswordInputProps | PasscodeInputProps;
+
 export const Input: React.FC<InputProps> = ({
   type,
   label,
@@ -14,17 +28,31 @@ export const Input: React.FC<InputProps> = ({
   passcodeLength,
 }) => {
   return (
-    <div>
-      <p className={styles.label}>{label}</p>
-      {type === "passcode" && passcodeLength! > 0 ? (
-        <Row gap={10}>
-          {[...new Array(passcodeLength).entries()].map((item, index) => (
-            <input type={type} className={styles.passcode} />
+    <Column className={styles.container}>
+      {label && <label className={styles.label}>{label}</label>}
+
+      {type === "passcode" ? (
+        <Row gap={10} aria-label="Passcode input">
+          {Array.from({ length: passcodeLength }, (_, index) => (
+            <input
+              key={index}
+              type="text" // Better to use password for passcode fields
+              className={styles.passcode}
+              maxLength={1}
+              aria-label={`Passcode digit ${index + 1}`}
+              inputMode="numeric"
+              pattern="[0-9]*"
+            />
           ))}
         </Row>
       ) : (
-        <input type={type} className={styles.root} placeholder={placeholder} />
+        <input
+          type={type}
+          className={styles.root}
+          placeholder={placeholder}
+          aria-label={label}
+        />
       )}
-    </div>
+    </Column>
   );
 };
