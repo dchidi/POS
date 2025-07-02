@@ -1,6 +1,6 @@
 .root,
 .passcode {
-  width: min(90%, 300px);
+  width: min(100%, 300px);
   height: 45px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -19,5 +19,5 @@
   font-size: 0.8rem;
   color: var(--black-150);
   width: fit-content;
-  background-color: var(--white);
+  /* background-color: var(--white); */
 }

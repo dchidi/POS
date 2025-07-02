@@ -8,8 +8,8 @@
   width: max-content;
   padding: 10px 20px;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
   font-weight: 600;
   border-radius: 4px;
 }
@@ -21,7 +21,7 @@
   color: var(--white);
 }
 .root:hover {
-  background-color: var(--primary-100);
-  transform: translateY(-2px);
+  background-color: var(--primary-150);
+  transform: translateY(-1px);
   transition: transform 0.5s, opacity 1s;
 }

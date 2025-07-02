@@ -14,7 +14,7 @@ const NotFound = lazy(() => import("../pages/NotFound"));
 
 const AppRoutes = () => {
   return (
-    <Suspense fallback={<Loading />}>
+    <Suspense fallback={<Loading size="fullPage" />}>
       <Routes>
         {/* Redirect root to login */}
         <Route path="/" element={<Navigate to="/login" replace />} />
