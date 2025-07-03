@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 import styles from "./Login.module.css";
-import { Column, Row } from "../components/layouts/row_column";
+import { Column, Row } from "../../components/layouts/row_column";
 import { IoIosLock } from "react-icons/io";
-import Button from "../components/ui/button/Button";
-import { InputText } from "../components/ui/input/InputText";
-import { InputPassword } from "../components/ui/input/InputPassword";
+import Button from "../../components/ui/button/Button";
+import { InputText } from "../../components/ui/input/InputText";
+import { InputPassword } from "../../components/ui/input/InputPassword";
 import { useState } from "react";
-import { Loading } from "../components/ui/loading/Loading";
-import { InputPassCode } from "../components/ui/input/InputPassCode";
+import { Loading } from "../../components/ui/loading/Loading";
+import { InputPassCode } from "../../components/ui/input/InputPassCode";
 
 const Login = () => {
   const [loginUI, setLoginUI] = useState<"login" | "loading" | "passcode">(
@@ -41,7 +41,7 @@ const Login = () => {
     <Row className={styles.root} align="center" gap={50}>
       <Column justify="center" align="center">
         <IoIosLock className={styles.lockImg} />
-        <h3 className={styles.lockLabel}>ScanPay Lock</h3>
+        {/* <h3 className={styles.lockLabel}>ScanPay Lock</h3> */}
       </Column>
       <Column gap={15} className={styles.form}>
         {loginUI === "login" && (

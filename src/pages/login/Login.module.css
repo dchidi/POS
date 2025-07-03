@@ -30,7 +30,11 @@
   min-width: 150px;
   color: var(--primary-150);
 }
-
+.container {
+  display: flex;
+  flex-direction: column;
+  /* background-color: yellow; */
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 384px) {
   .form {
